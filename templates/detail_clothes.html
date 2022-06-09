@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Detalle de prenda
+{% endblock %}
+
+{% block contenido %}
+<h1 style="margin-left:30rem">Aca va el contenido de detalles de prendas</h1>
+<div class="d-flex" style="margin-top:5rem; margin-left:7rem">
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{object.name}}</h5>
+            <p class="card-text">{{object.description}}</p>
+            <p class="card-text">{{object.price}}</p>
+            <a href="/clothes/update-clothes/{{object.id}}/" class="btn btn-primary">Editar</a>
+            <a href="/clothes/delete-clothes/{{object.id}}/" class="btn btn-danger">Eliminar</a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
